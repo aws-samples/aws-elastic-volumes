@@ -1,0 +1,18 @@
+{
+    "version": "0",
+    "id": "16553020-c85a-44f2-a3bb-0baab6854e22",
+    "detail-type": "EBS Volume Notification",
+    "source": "aws.ec2",
+    "account": "ACCOUNT_ID",
+    "time": "2017-02-20T09:00:00Z",
+    "region": "us-east-1",
+    "resources": [
+    "arn:aws:ec2:us-east-1:ACCOUNT_ID:volume/VOLUME_ID"
+    ],
+    "detail": {
+    "result": "completed",
+    "cause": "",
+    "event": "modifyVolume",
+    "request-id": "35636c36-8126-435d-b891-78a8471a4c3d"
+    }
+}
