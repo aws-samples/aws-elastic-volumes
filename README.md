@@ -2,7 +2,7 @@
 Sample code to help with Elastic Block Store automation with Elastic Volumes feature
 
 ##Installation
-refer to the [SETUP.md](Docs/SETUP.md) document in the Docs/ folder for thesetup instructions
+refer to the [SETUP.md](Docs/SETUP.md) document in the Docs/ folder for the setup instructions
 
 ## Lambda Function
 ### tag_instance.py
