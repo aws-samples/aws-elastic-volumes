@@ -1,6 +1,8 @@
 # aws-elastic-volumes
 Sample code to help with Elastic Block Store automation with Elastic Volumes feature
 
+##Installation
+refer to the [SETUP.md](Docs/SETUP.md) document in the Docs/ folder for thesetup instructions
 
 ## Lambda Function
 ### tag_instance.py
@@ -31,7 +33,7 @@ The function parses the volume ID from the resource ARN recorded in the request,
 3. The Tags provided are defined as viable targets by at least one maintenance window.
 4. Tag the instance only if "result": "completed" is provided in the triggering event (no action will be done otherwise) 
 
-The maintenance tag and its value are configurable through the Lambda Environment variables **Tagname** and **Tagvalue**.  
+The maintenance tag and its value are configurable through Lambda Environment variables.
 
 The Function will succeed with an empty return and an entry in the Cloudwatch Log, succeed with warning if [3] or it will raise an Exception if [1] or [2].
 
@@ -96,10 +98,6 @@ To set up as Task for the maintenance window targeting the EC2 instances with th
 PowerShell script that checks for online volumes, partitions, and assigned drive letter. Then checks for max size achievable (if the volume has been resized) and extend all the drives if possible.
 
 ### Set-MaximumPartitionSize.ps1_encoded.json
-Script encoded as a Systems Manager Document (schema Version 2.0), can be uploaded with the following CLI command (replace DOCUMENT\_NAME with one of your choosing):
-
-```
-aws ssm create-document --content file://Set-MaximumPartitionSize.ps1_encoded.json --document-type Command --name "DOCUMENT_NAME"
-```
+Script encoded as a Systems Manager Document (schema Version 2.0).
 
 
